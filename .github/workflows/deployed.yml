@@ -20,7 +20,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18'
+          node-version: '22'
           cache: 'npm'  
           cache-dependency-path: package-lock.json
 
@@ -39,4 +39,4 @@ jobs:
           deploy-message: "Deploy from GitHub Actions"
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.TOKEN_NETLIFY }}
-          NETLIFY_SITE_ID: ${{ secrets.PROJECT_ID }}        
+          NETLIFY_SITE_ID: ${{ secrets.PROJECT_ID }} 
